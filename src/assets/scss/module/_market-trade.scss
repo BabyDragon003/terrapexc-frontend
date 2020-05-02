@@ -1,0 +1,229 @@
+.market-trade input {
+  border: 1px solid #e0e3eb;
+  font-weight: 300;
+}
+
+.market-trade input:focus {
+  box-shadow: none;
+  border-color: #e0e3eb;
+}
+
+.market-trade {
+  border: 1px solid #e0e3eb;
+  border-radius: 2px;
+}
+
+.market-trade .tab-content {
+  // height: 358px;
+  overflow-y: auto;
+  padding: 14px 20px;
+}
+
+.market-trade .nav .nav-item .nav-link.active {
+  background: #fff;
+  color: #007bff;
+}
+
+.market-trade .nav .nav-item .nav-link {
+  color: #4a4a4a;
+  padding: 0;
+}
+
+.market-trade .input-group-text {
+  background: #eff2f6;
+  color: #4a4a4a;
+  font-weight: 300;
+}
+
+.market-trade .input-group {
+  margin-bottom: 14px;
+}
+
+.market-trade .nav-tabs .nav-link.active {
+  border-color: transparent;
+  color: white;
+}
+
+.market-trade .nav-tabs .nav-link {
+  color: #4f5966;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.market-trade .nav-tabs {
+  border-bottom: 1px solid transparent;
+}
+
+.market-trade-list li a {
+  background: #eff2f6;
+  color: #4a4a4a;
+  font-weight: 300;
+  padding: 3px 15px;
+  border-radius: 5px;
+}
+
+.market-trade-list li {
+  display: inline-block;
+  margin-right: 7px;
+  margin-bottom: 7px;
+}
+
+.market-trade-list li:last-child {
+  margin-right: 0;
+}
+
+.market-trade-buy .market-trade-list li a:hover {
+  text-decoration: none;
+  background: #26a69a;
+  color: #fff;
+}
+
+.market-trade-sell .market-trade-list li a:hover {
+  text-decoration: none;
+  background: #ef5350;
+  color: #fff;
+}
+
+.market-trade button.buy,
+.market-trade button.sell {
+  background: #26de81;
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  box-shadow: 0px 0px 15px 0px #26de81ad;
+}
+
+.market-trade button.connect {
+  background: #0089ff;
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  box-shadow: 0px 0px 15px 0px #0089ffad;
+}
+
+.market-trade button.sell {
+  background: #ff231f;
+  box-shadow: 0px 0px 15px 0px #ff231fad;
+}
+
+.market-trade p {
+  margin: 5px 0;
+  font-size: 13px;
+  color: #4a4a4a;
+}
+
+.market-trade p span {
+  float: right;
+}
+
+.market-trade-list {
+  margin-bottom: 10px;
+}
+
+.market-trade-item {
+  width: 100%;
+}
+
+.market-trade-buy,
+.market-trade-sell {
+  width: 100%;
+}
+
+.market-trade-buy {
+  padding: 0 15px 0 0;
+}
+
+.market-trade-sell {
+  padding: 0 0 0 15px;
+  border-left: 1px solid #e0e3eb;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 20px;
+
+  .slider-tooltip {
+    position: absolute;
+    top: -36px;
+    left: 0;
+    width: 42px;
+    padding-top: 2px;
+    border-radius: 5px;
+    transform: translateX(-50%);
+    background-color: rgb(66 73 84);
+    color: rgb(203 203 203);
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    z-index: 99;
+  }
+
+  &:hover {
+    .slider-tooltip {
+      opacity: 1;
+    }
+  }
+
+  .slider-bar {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    top: 3px;
+    background-color: rgb(71, 77, 87);
+  }
+
+  .draggable-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+
+  .btn-slider {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    transition: left 150ms;
+    transform: translateX(-50%) rotate(45deg);
+    background-color: rgb(30, 35, 41);
+    border: 3px solid rgb(183, 189, 198);
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 90;
+
+    &.active {
+      transition: none;
+    }
+  }
+
+  .btn-slider-stepper {
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    background-color: rgb(30, 35, 41);
+    color: rgb(132, 142, 156);
+    border-radius: 2px;
+    border: 2px solid rgb(71, 77, 87);
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: rotate(45deg) scale(1.4);
+      border: 2px solid rgb(163, 163, 163);
+    }
+  }
+}
