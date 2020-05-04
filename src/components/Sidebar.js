@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Link } from '@reach/router';
 import clsx from 'clsx';
 import { Navbar, Nav } from 'react-bootstrap';
