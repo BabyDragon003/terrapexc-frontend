@@ -1,3 +1,4 @@
+import React, { Component } from 'react';
 import HistoryOrder from '../components/HistoryOrder';
 import MarketHistory from '../components/MarketHistory';
 import MarketPairs from '../components/MarketPairs';
