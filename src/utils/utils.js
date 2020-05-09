@@ -23,32 +23,6 @@ export function convertFromMicroDenom(denom) {
 }
 
 export function convertToFixedDecimals(amount) {
-  if (typeof amount === 'string') {
-    amount = Number(amount)
-  }
-  if (amount > 0.01) {
-    return amount.toFixed(2)
-  } else return String(amount)
-}
-
-export function float2int(value) {
-  return parseInt(value.toFixed(0));
-}
-
-export function parseDecimalFloat(value, count = 3) {
-  return parseFloat(value.toFixed(count));
-}
-
-export const zeroVotingCoin = {
-  amount: '0',
-  denom: 'ucredits',
-}
-
-export const zeroStakingCoin = {
-  amount: '0',
-  denom: process.env.REACT_APP_PUBLIC_STAKING_DENOM || 'ujuno',
-}
-
 export const numberWithCommas = (x, digits = 3) => {
   if (isEmpty(x)) return '0';
   return Number(x).toLocaleString(undefined, { maximumFractionDigits: digits });
