@@ -1,4 +1,3 @@
-import { useState, useEffect, useMemo } from 'react';
 import { Tabs, Tab } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
@@ -23,6 +22,32 @@ export default function MarketTrade({ pair_id }) {
   const [limitBuyTotal, setLimitBuyTotal] = useState(0);
   const [limitBuySlideValue, setLimitBuySlideValue] = useState(0);
   const [limitSellPrice, setLimitSellPrice] = useState(0);
+  const [limitSellAmount, setLimitSellAmount] = useState(0);
+  const [limitSellTotal, setLimitSellTotal] = useState(0);
+  const [limitSellSlideValue, setLimitSellSlideValue] = useState(0);
+  const [marketBuyPrice, setMarketBuyPrice] = useState(0);
+  const [marketBuyAmount, setMarketBuyAmount] = useState(0);
+  const [marketBuyTotal, setMarketBuyTotal] = useState(0);
+  const [marketBuySlideValue, setMarketBuySlideValue] = useState(0);
+  const [marketSellPrice, setMarketSellPrice] = useState(0);
+  const [marketSellAmount, setMarketSellAmount] = useState(0);
+  const [marketSellTotal, setMarketSellTotal] = useState(0);
+  const [marketSellSlideValue, setMarketSellSlideValue] = useState(0);
+  const [fromBalance, setFromBalance] = useState(0);
+  const [toBalance, setToBalance] = useState(0);
+  const [marketBuyAmountVisible, showMarketBuyAmount] = useState(true);
+  const [marketSellAmountVisible, showMarketSellAmount] = useState(true);
+  const network = networks[NET_NAME];
+  const from = PAIR_LIST[pair_id].from;
+  const to = PAIR_LIST[pair_id].to;
+
+  const handleLimitBuyOrder = async () => {
+    if (limitBuyPrice <= 0) {
+      toast.warning(`Please input ${from?.symbol} price`);
+      return;
+    }
+    if (limitBuyAmount <= 0) {
+      toast.warning(`Please input ${to?.symbol} amount`);
       return;
     }
 

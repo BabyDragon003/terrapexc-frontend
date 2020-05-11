@@ -1,4 +1,3 @@
-import { useConnectedWallet } from "@terra-money/wallet-provider"
 
 const useAddress = () => {
   const connectedWallet = useConnectedWallet()

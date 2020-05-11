@@ -1,4 +1,3 @@
-export const NATIVE_TOKEN_DECIMALS = 6;
 export const COMMISSION_RATE = 0.003; // 0.3%
 export const NET_NAME = 'mainnet';
 
