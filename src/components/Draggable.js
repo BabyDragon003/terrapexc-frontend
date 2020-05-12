@@ -1,13 +1,8 @@
+import { useEffect, useRef, useState } from "react";
 
 const Draggable = (props) => {
   const container = useRef();
   const dragItem = useRef();
-  const tooltip = useRef();
-  const pos1 = useRef();
-  const pos2 = useRef();
-  const [isDown, setIsDown] = useState(false);
-  const [value, setValue] = useState(0);
-
   useEffect(() => {
     if (props.disabled) {
       goToStepper(0);
