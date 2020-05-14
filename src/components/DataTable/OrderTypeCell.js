@@ -8,6 +8,17 @@ const OrderTypeCell = ({ text, setItem }) => {
   const handleClick = (v) => {
     setActive(v);
     setItem(v);
+  }
+  return (
+    <div className="selectbox dropdown">
+      <span>{text} <FaChevronDown /></span>
+      <ul className="dropdown-menu">
+        <li className={`dropdown-item ${active === STATUS_TYPE.ALL ? 'active' : ''}`} onClick={() => handleClick(STATUS_TYPE.ALL)}>
+          All
+        </li>
+        <li className={`dropdown-item ${active === STATUS_TYPE.OPEN ? 'active' : ''}`} onClick={() => handleClick(STATUS_TYPE.OPEN)}>
+          Open
+        </li>
         <li className={`dropdown-item ${active === STATUS_TYPE.COMPLETED ? 'active' : ''}`} onClick={() => handleClick(STATUS_TYPE.COMPLETED)}>
           Completed
         </li>
