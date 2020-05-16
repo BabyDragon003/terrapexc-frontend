@@ -18,16 +18,11 @@ const Draggable = (props) => {
   }, [props.goto, props.disabled])
 
   const goToStepper = (step) => {
-  const closeDragElement = () => {
-    /* stop moving when mouse button is released:*/
-    document.onmouseup = null;
-    document.onmousemove = null;
-    setIsDown(false);
+    setValue(step);
+    tooltip.current.style.left = container.current.offsetWidth * (step / 100) + "px";
+    dragItem.current.style.left = container.current.offsetWidth * (step / 100) + "px";
   }
 
-  const elementDrag = (e) => {
-    e = e || window.event;
-    e.preventDefault();
     // calculate the new cursor position:
     pos1.current = pos2.current - e.clientX;
     var posx = dragItem.current.offsetLeft - pos1.current;

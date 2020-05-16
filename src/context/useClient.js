@@ -23,18 +23,3 @@ const NetworkProvider = ({ children }) => {
 
   const value = { terraClient, network };
   if (network) {
-    return (
-      <NetworkContext.Provider value={value}>
-        {children}
-      </NetworkContext.Provider>
-    );
-  } else {
-    return (
-      <div className="m-10 text-center text-red-500">
-
-      </div>
-    );
-  }
-};
-
-export { useClient, NetworkProvider }
