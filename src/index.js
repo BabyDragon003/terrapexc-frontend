@@ -8,3 +8,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/ionicons.min.css';
 import './assets/scss/style.scss';
 
+ReactDOM.render(
+  <LocationProvider>
+    <App />
+  </LocationProvider>,
+  document.getElementById('root')
+);
