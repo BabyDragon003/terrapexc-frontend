@@ -13,3 +13,12 @@ const MarketOrderDropdown = ({ text, visibleItem, setVisibleItem }) => {
         <li className={`dropdown-item ${visibleItem === true ? 'active' : ''}`} onClick={() => handleClick(true)}>
           Amount
         </li>
+        <li className={`dropdown-item ${visibleItem === false ? 'active' : ''}`} onClick={() => handleClick(false)}>
+          Total
+        </li>
+      </ul>
+    </div>
+  )
+}
+
+export default MarketOrderDropdown;

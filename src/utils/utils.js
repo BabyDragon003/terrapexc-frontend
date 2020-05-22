@@ -13,6 +13,22 @@ export function fromWei(amount, decimal = 6) {
 export function toWei(amount, decimal = 6) {
   if (typeof amount === 'string') {
     amount = Number(amount)
+  }
+  amount = amount * 10 ** decimal
+  return isNaN(amount) ? '0' : String(amount).split('.')[0];
+}
+
+export function convertFromMicroDenom(denom) {
+  return denom?.substring(1).toUpperCase()
+}
+
+export function convertToFixedDecimals(amount) {
+  if (typeof amount === 'string') {
+    amount = Number(amount)
+  }
+  if (amount > 0.01) {
+    return amount.toFixed(2)
+  } else return String(amount)
 }
 
 export function float2int(value) {
