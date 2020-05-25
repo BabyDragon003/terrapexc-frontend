@@ -1,4 +1,3 @@
-import { LCDClient } from '@terra-money/terra.js';
 import { createContext, useContext, useMemo } from 'react';
 import { networks, NET_NAME } from "../utils/networks";
 

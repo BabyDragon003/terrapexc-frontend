@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import { useLocation } from '@reach/router';
 import HistoryOrder from '../components/HistoryOrder';
 import MarketHistory from '../components/MarketHistory';

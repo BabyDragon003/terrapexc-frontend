@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import clsx from 'clsx';
 import { FiChevronDown } from 'react-icons/fi';
 import { MdOutlineAccountBalanceWallet } from 'react-icons/md';
