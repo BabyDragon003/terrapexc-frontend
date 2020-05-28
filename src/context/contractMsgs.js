@@ -1,3 +1,4 @@
+import { MsgExecuteContract, Coins } from '@terra-money/terra.js';
 
 export function estimateFee(terraClient, msg) {
   // Estimate the fee (gas + stability fee/tax)
@@ -10,22 +11,6 @@ export function increaseAllowanceMsg(walletAddress, tokenContract, spender, amou
     tokenContract,
     {
       increase_allowance: {
-        spender: spender,
-        amount: amount,
-        expires: {
-          never: {}
-        }
-      }
-    }
-  )
-}
-
-export function decreaseAllowanceMsg(walletAddress, tokenContract, spender, amount) {
-  return new MsgExecuteContract(
-    walletAddress,
-    tokenContract,
-    {
-      decrease_allowance: {
         spender: spender,
         amount: amount,
         expires: {
