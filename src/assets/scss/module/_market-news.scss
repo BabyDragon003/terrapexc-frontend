@@ -13,12 +13,13 @@
 .market-news li:hover {
   background: #f6f8f9;
 }
-
-.market-news li:last-child {
-  border: 0;
+.market-news li strong {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 2px;
+  color: #4a4a4ac7;
 }
 
-.market-news ul {
-  height: 348px;
-  overflow-y: auto;
-}
+.market-news li span {
+  display: block;
+  margin-top: 5px;

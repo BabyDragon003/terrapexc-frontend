@@ -13,26 +13,16 @@ const Draggable = (props) => {
     if (props.disabled) {
       goToStepper(0);
     } else {
+      goToStepper(props.goto);
+    }
+  }, [props.goto, props.disabled])
 
-    // get the mouse cursor position at startup:
-    pos2.current = e.clientX;
-    setIsDown(true);
-
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
+  const goToStepper = (step) => {
+    setValue(step);
+    tooltip.current.style.left = container.current.offsetWidth * (step / 100) + "px";
+    dragItem.current.style.left = container.current.offsetWidth * (step / 100) + "px";
   }
 
-  const closeDragElement = () => {
-    /* stop moving when mouse button is released:*/
-    document.onmouseup = null;
-    document.onmousemove = null;
-    setIsDown(false);
-  }
-
-  const elementDrag = (e) => {
-    e = e || window.event;
-    e.preventDefault();
     // calculate the new cursor position:
     pos1.current = pos2.current - e.clientX;
     var posx = dragItem.current.offsetLeft - pos1.current;
