@@ -3,6 +3,12 @@ import { isNil } from "ramda"
 import { Dec } from '@terra-money/terra.js';
 import { NATIVE_TOKEN_DECIMALS } from './networks';
 
+const rm = BN.ROUND_DOWN
+
+/**
+ * Calculates the current token price given pool sizes and weights
+ *
+ * @param {Int} ustPoolSize
  * @param {Int} tokenPoolSize
  * @param {Dec} ustWeight
  * @param {Dec} tokenWeight
