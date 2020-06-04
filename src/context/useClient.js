@@ -8,16 +8,11 @@ function buildClient(network) {
     chainID: network.chainID,
     gasPrices: network.gasPrices
   });
-  }, [network]);
+}
 
-  const value = { terraClient, network };
-  if (network) {
-    return (
-      <NetworkContext.Provider value={value}>
-        {children}
-      </NetworkContext.Provider>
-    );
-  } else {
+const NetworkContext = createContext();
+const useClient = () => useContext(NetworkContext);
+
     return (
       <div className="m-10 text-center text-red-500">
 
