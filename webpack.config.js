@@ -3,12 +3,6 @@ module.exports = (config, context) => {
     ...config,
     node: {
       global: true,
-    },
-    resolve: {
-      fallback: {
-        'process/browser': require.resolve('process/browser')
-      }
-    },
     module: {
       rules: [
         {
@@ -23,3 +17,12 @@ module.exports = (config, context) => {
                 // Prefer `dart-sass`
                 implementation: require("sass"),
               },
+            },
+            "source-map-loader"
+          ],
+        },
+      ],
+    },
+    ignoreWarnings: [/Failed to parse source map/],
+  };
+};
