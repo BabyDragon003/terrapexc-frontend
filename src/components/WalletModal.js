@@ -8,6 +8,17 @@ import { ConnectType, useWallet } from '@terra-money/wallet-provider';
 import { IoIosWarning } from 'react-icons/io';
 import { getShortAddress, copyToClipboard } from '../utils/utils';
 import { networks, NET_NAME } from '../utils/networks';
+import Swal from 'sweetalert2';
+
+const WalletModal = (props) => {
+  const { wallets, status, network, connect, disconnect } = useWallet();
+  const [open, setOpen] = useState(false);
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  useEffect(() => {
     if (status === WalletStatus.WALLET_NOT_CONNECTED) {
       return;
     }
