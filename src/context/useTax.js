@@ -1,4 +1,3 @@
-import { useCallback } from "react"
 import axios from 'axios'
 import { useClient } from './useClient';
 import { ULUNA, UUSD } from '../utils/constants';

@@ -1,4 +1,3 @@
-import React from "react";
 import { useEffect, useState } from "react";
 import { Tabs, Tab } from "react-bootstrap";
 import axios from "axios";

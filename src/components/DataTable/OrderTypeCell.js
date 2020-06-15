@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
 import { STATUS_TYPE } from '../../utils/constants';
 
