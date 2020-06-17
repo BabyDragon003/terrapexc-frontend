@@ -8,17 +8,6 @@ const useTax = () => {
   const { terraClient, network } = useClient();
 
   // useTax
-  const loadTaxInfo = useCallback(
-    async (contract_addr) => {
-      if (!contract_addr) {
-        return ""
-      }
-
-      let taxCap = ""
-      try {
-        const url = `${network.fcd}/treasury/tax_cap/${contract_addr}`
-        const res = (await axios.get(url)).data
-        taxCap = res.result
       } catch (error) {
         console.error(error)
       }
