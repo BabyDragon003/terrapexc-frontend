@@ -1,4 +1,3 @@
-import React from 'react';
 import { AdvancedChart } from 'react-tradingview-embed';
 
 export default function TradingChart() {

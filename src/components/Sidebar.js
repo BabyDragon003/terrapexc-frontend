@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Link } from '@reach/router';
 import clsx from 'clsx';
 import { Navbar, Nav } from 'react-bootstrap';
@@ -18,6 +17,27 @@ const Sidebar = () => {
         <img src={'img/logo.png'} alt="logo" />
       </header>
       <span
+        className={clsx("tw-absolute tw-cursor-pointer tw-top-0 tw-bottom-0 tw-my-auto tw-w-[35px] tw-h-[35px] tw-rounded-full tw-bg-slate-800 hover:tw-bg-slate-600 tw-flex tw-justify-center tw-items-center tw-transition-all tw-duration-200", show ? '-tw-right-[15px]' : '-tw-right-[25px]')}
+        onClick={() => setShow(!show)}
+      >
+        {show ? (
+          <FiChevronLeft className="tw-mr-[1px]" color='#ccc' size={22} />
+        ) : (
+          <FiChevronRight color='#ccc' size={22} />
+        )}
+      </span>
+      <div className="tw-flex tw-flex-col tw-justify-between tw-overflow-y-scroll tw-mt-5" style={{ height: 'calc(100% - 100px)' }}>
+        <Navbar>
+          <Navbar.Collapse>
+            <Nav className="tw-flex !tw-flex-col tw-w-full tw-gap-4">
+              <Link to="/" className="nav-link tw-w-full !tw-text-[#ccc] !tw-pl-5 hover:tw-bg-[#3a3b3c] tw-rounded-md">
+                <BiTrendingUp color="#ccc" size={22} />
+                <span className="tw-ml-5 tw-text-[16px]">TRADE</span>
+              </Link>
+              <Link to="/swap" className="nav-link tw-w-full !tw-text-[#ccc] !tw-pl-5 hover:tw-bg-[#3a3b3c] tw-rounded-md">
+                <BiTransferAlt color="#ccc" size={22} />
+                <span className="tw-ml-5 tw-text-[16px]">SWAP</span>
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
