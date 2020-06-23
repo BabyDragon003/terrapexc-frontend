@@ -1,3 +1,4 @@
+import React, { useEffect, Component } from 'react';
 import { Router, Location, Redirect } from '@reach/router';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';

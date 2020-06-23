@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Draggable from "./Draggable";
 
 const Slider = ({ setValue, disabled = false }) => {
