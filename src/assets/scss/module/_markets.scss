@@ -13,6 +13,22 @@
 }
 
 .markets-chart {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  left: 0;
+}
+
+.markets-content span.green,
+.markets-content span.red {
+  position: absolute;
+  right: 0;
+  background: #26a69a;
+  color: #fff;
+  top: 15px;
+  padding: 3px 12px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
   font-weight: 600;
 }
 .markets-content span.red {

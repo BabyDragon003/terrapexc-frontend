@@ -13,16 +13,11 @@ const Draggable = (props) => {
     if (props.disabled) {
       goToStepper(0);
     } else {
+      goToStepper(props.goto);
+    }
+  }, [props.goto, props.disabled])
 
-    // get the mouse cursor position at startup:
-    pos2.current = e.clientX;
-    setIsDown(true);
-
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
-
+  const goToStepper = (step) => {
   const closeDragElement = () => {
     /* stop moving when mouse button is released:*/
     document.onmouseup = null;
