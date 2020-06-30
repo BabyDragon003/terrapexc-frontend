@@ -3,12 +3,6 @@ module.exports = (config, context) => {
     ...config,
     node: {
       global: true,
-    },
-    resolve: {
-      fallback: {
-        'process/browser': require.resolve('process/browser')
-      }
-    },
     module: {
       rules: [
         {
