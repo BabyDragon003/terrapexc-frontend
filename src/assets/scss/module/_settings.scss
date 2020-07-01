@@ -3,16 +3,11 @@
   border-radius: 5px;
   border: none;
   margin-bottom: 15px;
-.settings-nav .nav-item {
-  width: 100%;
 }
-.settings-nav .nav-link {
-  border-radius: 0;
-  text-transform: uppercase;
-  color: #18214d;
-  font-weight: 600;
-  margin: 2px 0;
-  padding: 10px 20px;
+
+.settings-nav {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 14px -6px;
+  border-radius: 5px;
 }
 .settings-nav .nav-link i {
   margin-right: 10px;
