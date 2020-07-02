@@ -13,22 +13,6 @@ export default function OrderBook({ pair_id }) {
   const [buy_top, setBuyTop] = useState(0);
   const [sell_top, setSellTop] = useState(0);
   const [recent_orders, setRecentOrders] = useState([]);
-  const from = PAIR_LIST[pair_id].from;
-  const to = PAIR_LIST[pair_id].to;
-  const { setClickedPrice } = useContract();
-
-  useEffect(() => {
-    let timerId = setInterval(() => {
-      getBuyOrders();
-      getBuyTopOrder();
-      getSellOrders();
-      getSellTopOrder();
-      getRecentOrders();
-    }, 10000);
-
-    return () => clearInterval(timerId);
-  }, [pair_id]);
-
   const handleClickOrder = (price) => {
     setClickedPrice(price);
   }
