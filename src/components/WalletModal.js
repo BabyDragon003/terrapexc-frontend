@@ -18,6 +18,27 @@ const WalletModal = (props) => {
     setOpen(false);
   };
 
+  useEffect(() => {
+    if (status === WalletStatus.WALLET_NOT_CONNECTED) {
+      return;
+    }
+    if (status !== WalletStatus.INITIALIZING && network.chainID !== networks[NET_NAME].chainID) {
+      Swal.fire({
+        title: '<strong class="tw-text-black>Sucess</strong>',
+        icon: 'warning',
+        html:
+          `<p class="tw-text-black">Wrong network connection</p>
+        <span class="tw-text-black tw-text-[16px]">Your wallet is connected to <b>${network.name}(${network.chainID})</b>.</span><br/>
+        <span class="tw-text-black tw-text-[16px]">Please change the network to <b>Terra Classic(${networks[NET_NAME].chainID})</b>.</span>
+        `,
+        showCancelButton: false,
+        confirmButtonColor: '#0d6efd',
+      })
+    }
+  }, [status, network])
+
+  const handleTerraConnect = () => {
+    connect(ConnectType.EXTENSION);
     props.close();
   }
 
