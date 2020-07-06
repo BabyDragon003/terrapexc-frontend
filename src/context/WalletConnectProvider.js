@@ -1,4 +1,3 @@
-import {
   WalletProvider,
   getChainOptions,
 } from "@terra-money/wallet-provider"
