@@ -3,6 +3,12 @@ import clsx from 'clsx';
 import { FiChevronDown } from 'react-icons/fi';
 import { MdOutlineAccountBalanceWallet } from 'react-icons/md';
 import { IoMdSend } from 'react-icons/io';
+
+const Walletbar = () => {
+  const [show, setShow] = useState(false);
+
+  return (
+    <nav className={clsx('tw-w-[350px] tw-fixed tw-top-0 tw-h-full tw-bg-slate-800 tw-transition-all tw-ease-in-out tw-duration-300 tw-z-50', show ? 'tw-right-0' : '-tw-right-[350px]')}>
       <header className='tw-px-8 tw-pb-2 tw-pt-12 tw-text-center !tw-bg-transparent'>
         <span className="tw-text-white tw-text-xl">Portfolio Value</span>
         <div className="tw-flex tw-items-end tw-mt-4 tw-justify-center">
