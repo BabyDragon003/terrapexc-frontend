@@ -8,15 +8,10 @@
   color: #4a4a4a;
   font-size: 11px;
   display: block;
-
-.market-news li span {
-  display: block;
-  margin-top: 5px;
+  text-decoration: none;
 }
-
-.market-news li {
-  border-bottom: 1px solid #f0f3fa;
-  padding: 10px 13px;
+.market-news li:hover {
+  background: #f6f8f9;
 }
 
 .market-news li:last-child {
