@@ -13,3 +13,8 @@ export default function TradingChart() {
             toolbar_bg: '#fff',
             height: 550,
           }}
+        />
+      </div>
+    </>
+  );
+}
