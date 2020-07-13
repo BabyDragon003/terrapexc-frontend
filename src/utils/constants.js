@@ -1,4 +1,3 @@
-export const LUNA = "tLUNC"
 export const UST = "UST"
 
 export const ULUNA = "uluna"
