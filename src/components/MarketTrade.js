@@ -1,3 +1,4 @@
+import { useState, useEffect, useMemo } from 'react';
 import { Tabs, Tab } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
@@ -7,17 +8,6 @@ import ConnectWallet from './ConnectWallet';
 import useAddress from '../context/useAddress';
 import { useContract } from '../context/useContract';
 import { networks, NET_NAME, API_URL } from '../utils/networks';
-import { getShortAddress, fromWei, toWei } from '../utils/utils';
-import { TX_STATE, TX_TYPE, PAIR_LIST, ORDER_TYPE, RETURN_STATUS } from '../utils/constants';
-import Slider from './Slider';
-import MarketOrderDropdown from './DataTable/MarketOrderDropdown';
-
-export default function MarketTrade({ pair_id }) {
-  const { status, wallets, disconnect } = useWallet();
-  const walletAddress = useAddress();
-  const { lastTx, setLastTx, txType, setTxType, executeOrder, getTokenBalance, clickedPrice, setClickedPrice, updateHistory, setUpdateHistory } = useContract();
-  const [isBuy, setIsBuy] = useState(true);
-  const [limitBuyPrice, setLimitBuyPrice] = useState(0);
   const [limitBuyAmount, setLimitBuyAmount] = useState(0);
   const [limitBuyTotal, setLimitBuyTotal] = useState(0);
   const [limitBuySlideValue, setLimitBuySlideValue] = useState(0);
