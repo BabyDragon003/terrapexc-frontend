@@ -8,6 +8,17 @@ export const UUSD = "uusd"
 export const TX_STATE = {
   INIT: 'init',
   START: 'start',
+  PENDING: 'pending',
+  COMPLETE: 'complete',
+  ERROR: 'error'
+}
+
+export const TX_TYPE = {
+  NONE: 0,
+  BUY: 1,
+  SELL: 2,
+  CANCEL: 3,
+}
 
 export const tokenInfos = new Map([
   [

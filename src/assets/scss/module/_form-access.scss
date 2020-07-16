@@ -8,6 +8,17 @@
 .form-access .form-group input,
 .form-access input {
   border: 1px solid #e0e3eb;
+  height: 45px;
+  color: #18214d;
+  font-size: 14px;
+}
+.form-access .form-group input:focus {
+  box-shadow: none;
+}
+.form-access a:hover {
+  text-decoration: none;
+}
+.form-access span {
   text-align: center;
   display: block;
   font-size: 22px;
