@@ -1,4 +1,3 @@
-import BN from "bignumber.js"
 import { isNil } from "ramda"
 import { Dec } from '@terra-money/terra.js';
 import { NATIVE_TOKEN_DECIMALS } from './networks';

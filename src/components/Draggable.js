@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from "react";
 
 const Draggable = (props) => {
   const container = useRef();
@@ -18,6 +17,27 @@ const Draggable = (props) => {
   }, [props.goto, props.disabled])
 
   const goToStepper = (step) => {
+    setValue(step);
+    tooltip.current.style.left = container.current.offsetWidth * (step / 100) + "px";
+    dragItem.current.style.left = container.current.offsetWidth * (step / 100) + "px";
+  }
+
+  const dragMouseDown = (e) => {
+    if (props.disabled) {
+      return;
+    }
+    e = e || window.event;
+    e.preventDefault();
+
+    // get the mouse cursor position at startup:
+    pos2.current = e.clientX;
+    setIsDown(true);
+
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
   const closeDragElement = () => {
     /* stop moving when mouse button is released:*/
     document.onmouseup = null;

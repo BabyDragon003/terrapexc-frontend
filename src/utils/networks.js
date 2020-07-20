@@ -1,4 +1,3 @@
-export const NATIVE_TOKEN_DECIMALS = 6;
 export const COMMISSION_RATE = 0.003; // 0.3%
 export const NET_NAME = 'mainnet';
 
@@ -18,3 +17,14 @@ export const networks = {
     routerContract: "",
     tradingContract: "terra1hxvd43lzml5eete78nknsqavgx9znggsz38k2y"
   },
+  testnet: {
+    id: "pisco-1",
+    name: "testnet",
+    chainID: "rebel-2",
+    lcd: "https://lcd.terrac.dev",
+    fcd: "https://fcd.terrac.dev",
+    explorer: "https://finder.terrac.dev/classictestnet/",
+    gasPrice: { uluna: 0.0015 },
+    fee: { gasPrice: 0.15, amount: 100000 },
+  }
+}
