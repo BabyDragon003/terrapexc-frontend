@@ -1,3 +1,4 @@
+import { useWallet, WalletStatus } from '@terra-money/wallet-provider';
 import { useConnectModal } from '../context/useConnectModal';
 
 const ConnectWallet = ({ className = '' }) => {

@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { FaSortUp, FaSortDown, FaSort } from 'react-icons/fa';
 import { SORT_TYPE } from '../../utils/constants';
 

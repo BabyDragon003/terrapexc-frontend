@@ -1,13 +1,8 @@
+.order-book table {
   height: 100%;
   display: flex;
   flex-direction: column;
 }
-
-.order-book table,
-.order-book tr,
-.order-book td,
-.order-book th {
-  width: 100%;
   table-layout: fixed;
 }
 
