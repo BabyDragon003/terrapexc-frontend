@@ -3,16 +3,11 @@ module.exports = (config, context) => {
     ...config,
     node: {
       global: true,
-    module: {
-      rules: [
-        {
-          test: /\.s[ac]ss$/i,
-          enforce: 'pre',
-          use: [
-            "style-loader",
-            "css-loader",
-            {
-              loader: "sass-loader",
+    },
+    resolve: {
+      fallback: {
+        'process/browser': require.resolve('process/browser')
+      }
               options: {
                 // Prefer `dart-sass`
                 implementation: require("sass"),
