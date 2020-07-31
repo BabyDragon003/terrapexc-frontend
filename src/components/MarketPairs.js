@@ -18,27 +18,6 @@ export default function MarketPairs() {
     setFavouriteList(favouritePairList);
   }, []);
 
-  const addFavourite = (pair_id) => {
-    let bFindMatch = false;
-    let favouritePairList = JSON.parse(localStorage.getItem('favouritePair'));
-    if (!favouritePairList) {
-      favouritePairList = [];
-    }
-    for (let i = 0; i < favouritePairList.length; i++) {
-      if (Number(favouritePairList[i]) === pair_id) {
-        favouritePairList.splice(i, 1);
-        bFindMatch = true;
-        break;
-      }
-    }
-    if (bFindMatch === false) {
-      favouritePairList.push(pair_id);
-    }
-    setFavouriteList(favouritePairList);
-    localStorage.setItem('favouritePair', JSON.stringify(favouritePairList));
-  }
-  return (
-    <>
       <div className="market-pairs">
         <div className="input-group">
           <div className="input-group-prepend">
