@@ -1,13 +1,8 @@
+import { useState, useEffect, useMemo } from 'react';
 import { Tabs, Tab } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
 import axios from 'axios';
-import { useWallet, WalletStatus } from '@terra-money/wallet-provider';
-import ConnectWallet from './ConnectWallet';
-import useAddress from '../context/useAddress';
-import { useContract } from '../context/useContract';
-import { networks, NET_NAME, API_URL } from '../utils/networks';
-import { getShortAddress, fromWei, toWei } from '../utils/utils';
 import { TX_STATE, TX_TYPE, PAIR_LIST, ORDER_TYPE, RETURN_STATUS } from '../utils/constants';
 import Slider from './Slider';
 import MarketOrderDropdown from './DataTable/MarketOrderDropdown';
