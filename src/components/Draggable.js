@@ -8,26 +8,16 @@ const Draggable = (props) => {
   const pos2 = useRef();
   const [isDown, setIsDown] = useState(false);
   const [value, setValue] = useState(0);
-    tooltip.current.style.left = container.current.offsetWidth * (step / 100) + "px";
-    dragItem.current.style.left = container.current.offsetWidth * (step / 100) + "px";
-  }
 
-  const dragMouseDown = (e) => {
+  useEffect(() => {
     if (props.disabled) {
-      return;
+      goToStepper(0);
+    } else {
+      goToStepper(props.goto);
     }
-    e = e || window.event;
-    e.preventDefault();
+  }, [props.goto, props.disabled])
 
-    // get the mouse cursor position at startup:
-    pos2.current = e.clientX;
-    setIsDown(true);
-
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
-
+  const goToStepper = (step) => {
   const closeDragElement = () => {
     /* stop moving when mouse button is released:*/
     document.onmouseup = null;

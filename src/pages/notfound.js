@@ -8,3 +8,11 @@ export default function notfound() {
         <div className="my-auto">
           <h2>404</h2>
           <p>Oops something went wrong</p>
+          <Link to="/" className="btn">
+            Back to Home <i className="icon ion-md-home"></i>
+          </Link>
+        </div>
+      </div>
+    </>
+  );
+}

@@ -8,6 +8,17 @@
   color: #4a4a4a;
   font-size: 11px;
   display: block;
+  text-decoration: none;
+}
+.market-news li:hover {
+  background: #f6f8f9;
+}
+.market-news li strong {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 2px;
+  color: #4a4a4ac7;
+}
 
 .market-news li span {
   display: block;

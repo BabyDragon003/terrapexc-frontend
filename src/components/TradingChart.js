@@ -8,3 +8,13 @@ export default function TradingChart() {
         <AdvancedChart
           widgetProps={{
             theme: 'light',
+            symbol: 'LUNCUSD', // 'USTCUSD'
+            allow_symbol_change: true,
+            toolbar_bg: '#fff',
+            height: 550,
+          }}
+        />
+      </div>
+    </>
+  );
+}
