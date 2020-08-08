@@ -23,11 +23,3 @@ const OrderTypeCell = ({ text, setItem }) => {
           Completed
         </li>
         <li className={`dropdown-item ${active === STATUS_TYPE.CANCELED ? 'active' : ''}`} onClick={() => handleClick(STATUS_TYPE.CANCELED)}>
-          Cancelled
-        </li>
-      </ul>
-    </div>
-  )
-}
-
-export default OrderTypeCell;

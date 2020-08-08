@@ -18,6 +18,27 @@
 .form-access a:hover {
   text-decoration: none;
 }
+.form-access span {
+  text-align: center;
+  display: block;
+  font-size: 22px;
+  margin-bottom: 15px;
+  margin-top: -5px;
+  font-weight: 600;
+}
+.form-access .text-right {
+  margin-top: -5px;
+  font-weight: 600;
+}
+
+.form-access button {
+  width: 100%;
+  padding: 12px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.form-access .custom-control-label::before,
 .form-access .custom-control-label::after {
   top: 2px;
 }
