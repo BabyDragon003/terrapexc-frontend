@@ -1,4 +1,3 @@
-import { React, useState, useEffect } from 'react';
 import { useNavigate } from '@reach/router';
 import { Tabs, Tab } from 'react-bootstrap';
 import { PAIR_LIST } from '../utils/constants';

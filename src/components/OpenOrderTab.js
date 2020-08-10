@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
 import axios from "axios";
 import moment from 'moment';

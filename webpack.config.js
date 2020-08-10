@@ -1,4 +1,3 @@
-module.exports = (config, context) => {
   return {
     ...config,
     node: {
@@ -23,3 +22,12 @@ module.exports = (config, context) => {
                 // Prefer `dart-sass`
                 implementation: require("sass"),
               },
+            },
+            "source-map-loader"
+          ],
+        },
+      ],
+    },
+    ignoreWarnings: [/Failed to parse source map/],
+  };
+};
