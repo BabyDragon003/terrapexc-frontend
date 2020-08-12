@@ -3,6 +3,12 @@ import { useEffect, useState } from "react";
 import { Tabs, Tab } from "react-bootstrap";
 import axios from "axios";
 import { networks, NET_NAME, API_URL } from "../utils/networks";
+import { PAIR_LIST } from "../utils/constants";
+import { Rectangle } from "@mui/icons-material";
+import { useContract } from '../context/useContract';
+
+export default function OrderBook({ pair_id }) {
+  const [buy_orders, setBuyOrders] = useState([]);
   const [sell_orders, setSellOrders] = useState([]);
   const [buy_top, setBuyTop] = useState(0);
   const [sell_top, setSellTop] = useState(0);
