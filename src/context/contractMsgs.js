@@ -21,6 +21,22 @@ export function increaseAllowanceMsg(walletAddress, tokenContract, spender, amou
   )
 }
 
+export function decreaseAllowanceMsg(walletAddress, tokenContract, spender, amount) {
+  return new MsgExecuteContract(
+    walletAddress,
+    tokenContract,
+    {
+      decrease_allowance: {
+        spender: spender,
+        amount: amount,
+        expires: {
+          never: {}
+        }
+      }
+    }
+  )
+}
+
 export function orderMsg(walletAddress, contract, pair_id, amount, price, is_buy, add_order = null, update_match_order = null, remove_match_orders = null) {
   const resCoins = new Coins([])
   const orderJson = {

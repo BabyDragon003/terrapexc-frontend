@@ -13,26 +13,16 @@ export function fromWei(amount, decimal = 6) {
 export function toWei(amount, decimal = 6) {
   if (typeof amount === 'string') {
     amount = Number(amount)
+  }
+  amount = amount * 10 ** decimal
+  return isNaN(amount) ? '0' : String(amount).split('.')[0];
 }
 
-export function float2int(value) {
-  return parseInt(value.toFixed(0));
+export function convertFromMicroDenom(denom) {
+  return denom?.substring(1).toUpperCase()
 }
 
-export function parseDecimalFloat(value, count = 3) {
-  return parseFloat(value.toFixed(count));
-}
-
-export const zeroVotingCoin = {
-  amount: '0',
-  denom: 'ucredits',
-}
-
-export const zeroStakingCoin = {
-  amount: '0',
-  denom: process.env.REACT_APP_PUBLIC_STAKING_DENOM || 'ujuno',
-}
-
+export function convertToFixedDecimals(amount) {
 export const numberWithCommas = (x, digits = 3) => {
   if (isEmpty(x)) return '0';
   return Number(x).toLocaleString(undefined, { maximumFractionDigits: digits });
