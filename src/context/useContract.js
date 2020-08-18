@@ -3,12 +3,6 @@ import { useWallet } from "@terra-money/wallet-provider"
 import { Coins, Fee } from "@terra-money/terra.js"
 import { toast } from 'react-toastify';
 import useAddress from './useAddress';
-import { useClient } from './useClient';
-import { fromWei, toWei, calcTax, hasTaxToken, toAmount } from '../utils/utils';
-import useTax from './useTax';
-import { TX_STATE, TX_TYPE, ULUNA, PAIR_LIST } from '../utils/constants';
-import { networks, NET_NAME } from '../utils/networks';
-import {
   orderMsg,
   increaseAllowanceMsg,
   decreaseAllowanceMsg,

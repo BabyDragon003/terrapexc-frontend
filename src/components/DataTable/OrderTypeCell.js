@@ -3,12 +3,6 @@ import { FaChevronDown } from 'react-icons/fa';
 import { STATUS_TYPE } from '../../utils/constants';
 
 const OrderTypeCell = ({ text, setItem }) => {
-  const [active, setActive] = useState(STATUS_TYPE.ALL);
-
-  const handleClick = (v) => {
-    setActive(v);
-    setItem(v);
-  }
   return (
     <div className="selectbox dropdown">
       <span>{text} <FaChevronDown /></span>
@@ -23,3 +17,11 @@ const OrderTypeCell = ({ text, setItem }) => {
           Completed
         </li>
         <li className={`dropdown-item ${active === STATUS_TYPE.CANCELED ? 'active' : ''}`} onClick={() => handleClick(STATUS_TYPE.CANCELED)}>
+          Cancelled
+        </li>
+      </ul>
+    </div>
+  )
+}
+
+export default OrderTypeCell;
