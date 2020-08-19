@@ -3,6 +3,12 @@ import { Link } from '@reach/router';
 import clsx from 'clsx';
 import { Navbar, Nav } from 'react-bootstrap';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { BiTransferAlt, BiTrendingUp } from 'react-icons/bi';
+import { HiOutlineCircleStack } from 'react-icons/hi2';
+import { AiOutlineBank } from 'react-icons/ai';
+import { BsMedium, BsTwitter, BsDiscord } from 'react-icons/bs';
+import { FaTelegramPlane } from 'react-icons/fa';
+
 const Sidebar = () => {
   const [show, setShow] = useState(false);
 
