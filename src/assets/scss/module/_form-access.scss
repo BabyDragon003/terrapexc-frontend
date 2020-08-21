@@ -8,26 +8,16 @@
 .form-access .form-group input,
 .form-access input {
   border: 1px solid #e0e3eb;
-  text-align: center;
-  display: block;
-  font-size: 22px;
-  margin-bottom: 15px;
-  margin-top: -5px;
-  font-weight: 600;
+  height: 45px;
+  color: #18214d;
+  font-size: 14px;
 }
-.form-access .text-right {
-  margin-top: -5px;
-  font-weight: 600;
+.form-access .form-group input:focus {
+  box-shadow: none;
 }
-
-.form-access button {
-  width: 100%;
-  padding: 12px;
-  font-weight: 600;
-  margin-top: 20px;
+.form-access a:hover {
+  text-decoration: none;
 }
-
-.form-access .custom-control-label::before,
 .form-access .custom-control-label::after {
   top: 2px;
 }
