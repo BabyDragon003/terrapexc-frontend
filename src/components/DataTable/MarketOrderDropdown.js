@@ -1,3 +1,4 @@
+import { FaChevronDown } from 'react-icons/fa';
 
 const MarketOrderDropdown = ({ text, visibleItem, setVisibleItem }) => {
 

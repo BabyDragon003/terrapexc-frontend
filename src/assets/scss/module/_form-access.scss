@@ -1,3 +1,4 @@
+.form-access form {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 14px -6px;
   border-radius: 5px;
   padding: 30px;
@@ -7,17 +8,6 @@
 .form-access .form-group input,
 .form-access input {
   border: 1px solid #e0e3eb;
-  height: 45px;
-  color: #18214d;
-  font-size: 14px;
-}
-.form-access .form-group input:focus {
-  box-shadow: none;
-}
-.form-access a:hover {
-  text-decoration: none;
-}
-.form-access span {
   text-align: center;
   display: block;
   font-size: 22px;

@@ -1,3 +1,4 @@
+import { MsgExecuteContract, Coins } from '@terra-money/terra.js';
 
 export function estimateFee(terraClient, msg) {
   // Estimate the fee (gas + stability fee/tax)

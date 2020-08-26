@@ -1,3 +1,4 @@
+.market-pairs tbody {
   height: 100%;
 }
 
@@ -7,17 +8,6 @@
   }
 }
 
-@media only screen and (max-width: 1200px) {
-  .order-book {
-    margin-top: 10px;
-  }
-
-  .markets-capital-item {
-    height: 289px;
-  }
-}
-
-@media only screen and (max-width: 991px) {
   .error-page h2 {
     font-size: 140px;
   }

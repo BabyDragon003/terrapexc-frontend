@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import moment from 'moment';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -7,17 +8,6 @@ import OrderSideCell from './DataTable/OrderSideCell';
 import OrderTypeCell from './DataTable/OrderTypeCell';
 import { API_URL } from "../utils/networks";
 import { useContract } from '../context/useContract';
-import { PAIR_LIST, ORDER_TYPE, ORDER_SIDE, STATUS_TYPE, SORT_TYPE } from "../utils/constants";
-import useAddress from '../context/useAddress';
-
-const SORT_FIELD = {
-  DATE: 'Date',
-  TYPE: 'Type',
-  PRICE: 'Price',
-  AMOUNT: 'Amount',
-  EXECUTED: 'Executed',
-  TOTAL: 'Total'
-}
 
 export default function OrderHistoryTab() {
   const [open_orders, setOpenOrders] = useState([]);

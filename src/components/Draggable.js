@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 
 const Draggable = (props) => {
   const container = useRef();
@@ -7,17 +8,6 @@ const Draggable = (props) => {
   const pos2 = useRef();
   const [isDown, setIsDown] = useState(false);
   const [value, setValue] = useState(0);
-
-  useEffect(() => {
-    if (props.disabled) {
-      goToStepper(0);
-    } else {
-      goToStepper(props.goto);
-    }
-  }, [props.goto, props.disabled])
-
-  const goToStepper = (step) => {
-    setValue(step);
     tooltip.current.style.left = container.current.offsetWidth * (step / 100) + "px";
     dragItem.current.style.left = container.current.offsetWidth * (step / 100) + "px";
   }

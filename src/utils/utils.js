@@ -1,3 +1,4 @@
+import BigNumber from "bignumber.js";
 import { ceil, min, times } from "./math"
 import { LUNA, ULUNA, UST, UUSD, tokenInfos } from "./constants"
 
@@ -7,17 +8,6 @@ export function fromWei(amount, decimal = 6) {
   }
   amount = amount / (10 ** decimal)
   return isNaN(amount) ? 0 : amount
-}
-
-export function toWei(amount, decimal = 6) {
-  if (typeof amount === 'string') {
-    amount = Number(amount)
-  }
-  amount = amount * 10 ** decimal
-  return isNaN(amount) ? '0' : String(amount).split('.')[0];
-}
-
-export function convertFromMicroDenom(denom) {
   return denom?.substring(1).toUpperCase()
 }
 
