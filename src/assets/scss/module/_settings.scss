@@ -23,6 +23,32 @@
 .settings-nav .nav-link i {
   margin-right: 10px;
 }
+.wallet .settings-nav .nav-link i {
+  margin-right: 5px;
+}
+.settings .card-title {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.settings-profile .col-md-6 {
+  margin-bottom: 20px;
+}
+
+.settings-profile input,
+.settings-profile select {
+  border: 1px solid #e0e3eb;
+  border-radius: 5px;
+  font-size: 14px;
+  height: 45px;
+}
+
+.settings-profile input[type='submit'] {
+  background: #007bff;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 25px;
+  height: inherit;
   font-size: 16px;
   margin-top: 10px;
 }
